@@ -1,0 +1,249 @@
+
+/* starting define color and font variables to be used in rest of the css */
+:root{
+
+    --clr-primary-blue:hsla(215, 51%, 70%);
+    --clr-primary-cyan:hsla(178, 100%, 50%);
+
+    --clr-neutral-100:hsl(216, 54%, 11%);  
+    --clr-neutral-100-v1:hsl(216, 54%, 12%);  
+    --clr-neutral-200:hsla(216, 50%, 16%);
+    --clr-neutral-200-v1:hsla(216, 50%, 20%);
+    --clr-neutral-300:hsla(215, 32%, 27%);
+    --clr-neutral-300-v1:hsla(215, 32%, 70%);
+    --clr-neutral-400:hsla(0, 0%, 100%);
+
+    --ff-main:'Outfit', sans-serif;
+    --fw-main-300: 300;
+    --fw-main-400: 400;
+    --fw-main-600: 600;
+    --fz-para: 1.125rem;
+}
+
+/* ============================================================================================================= */
+
+/* starting with body element and giving values required for the styling */
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--clr-neutral-100);
+    color:var(--clr-neutral-400);
+    display:grid;
+    place-items:center;
+    justify-items:center;
+    max-height:100vh;
+
+}
+
+/* ============================================================================================================= */
+
+/* styling of main container element */
+
+.container{
+    width:376px;
+    height:650px;
+    background-color: var(--clr-neutral-200-v1);
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 0 1.5rem   var(--clr-neutral-100-v1);
+
+}
+/* ============================================================================================================= */
+
+/* styling of subcontainer element, giving margins to all sides and padding on top side, also setting font in the current container */
+
+.sub-container{
+    margin:2rem 1rem;
+    padding-top: 1rem;
+    font-family:var(--ff-main) ;
+
+}
+/* ============================================================================================================= */
+
+/* setting cube image to the center of sub-container */
+
+
+.cube-image{
+    width:100%;
+    border-radius: 0.5rem;
+    position: relative;
+    display:block;
+    overflow: hidden;
+    
+}
+
+/* ============================================================================================================= */
+
+/* setting another div without any text to center it behind the image so that when the mouse hovers it changes color */
+/* here the position of the div is absolute */
+
+.cube-hover{
+
+    width: 344px;
+    height:344px;
+    position: absolute;
+    top: 49px;
+    border-radius: 0.5rem;
+    
+}
+
+/* ============================================================================================================= */
+
+/* setting eye-icon in the center of the cube images */
+
+.eye-image{
+    width:50px;
+    transform: translate(300%, 280%);
+    display: none;
+     
+}
+
+/* ============================================================================================================= */
+
+/* setting hover property that changes color and mouse pointer */
+
+.cube-hover:hover {
+     cursor: pointer;
+    border-radius: 1rem;
+    background-color:hsla(178, 100%, 50%, 0.378);
+    
+}
+/* ============================================================================================================= */
+
+/* setting of eye-icon when hover over it it displayes otherwise by default it will display none */
+
+
+.cube-hover:hover img{
+
+    display: block;
+}
+
+/* ============================================================================================================= */
+
+/* setting style of heading 1 element */
+
+.text-info h1{
+
+    font-size:22px;
+    font-weight: var(--fw-main-600);
+}
+
+/* setting color style on hover over h1 text */
+
+
+.text-info h1:hover{
+
+    cursor: pointer;
+    color:var(--clr-primary-cyan);
+}
+
+
+/* setting paragraph element styling and color */
+
+.text-info p{
+    font-size: var(--fz-para);
+    font-weight: 300;
+    color: var(--clr-neutral-300-v1);
+}
+
+
+/* ============================================================================================================= */
+
+/* setting coin and number of days information in a single line and space between them */
+
+.coin-days-info{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+
+}
+
+/* changing ETH logo color and making it center vertically with the ETH text */
+
+
+.coin-logo{
+    display:inline-flex;
+    color:var(--clr-primary-cyan);
+    align-items: center;
+    font-weight: var(--fw-main-600);
+}
+
+
+/* setting clock logo and also making it center vertically with the text after it. */
+
+
+.clock-logo {
+    display:inline-flex;
+    color:var(--clr-neutral-300-v1);
+    align-items: center;
+    
+}
+
+
+/* giving space between text and the SVG's used in this div */
+
+
+.coin-days-info svg{
+
+    padding-right:10px;
+}
+
+/* ============================================================================================================= */
+
+/* inserting and styling horizontal line */
+hr{
+
+    height:2px;
+    background-color:var(--clr-neutral-300);
+    border:0;
+    margin-top:2rem;
+    margin-bottom:1rem;
+}
+
+
+/* ============================================================================================================= */
+
+
+/* setting avatar logo and text in vertical line. */
+
+
+#footer{
+
+    display: flex;
+    align-items: center;
+}
+
+/* styling text and giving space between avatar image */
+
+
+#footer p{
+
+    margin-left:2rem;
+    color:var(--clr-neutral-300-v1);
+}
+
+/* changing part of the text color from blue to white  */
+
+
+#footer span{
+    color:var(--clr-neutral-400);
+}
+
+/* styling text color on hover and changing cursor to pointer. */
+
+
+#footer span:hover{
+    cursor: pointer;
+    color:var(--clr-primary-cyan);
+}
+
+/* styling avatar image with setting small width and giving border with radius and also the color to the border radius which is white. */
+
+.avatar-img{
+    width:50px;
+    border: 2px solid;
+    border-radius: 100%;
+    border-color: var(--clr-neutral-400);
+}
+
+/* ==============================================THE END=============================================================== */
